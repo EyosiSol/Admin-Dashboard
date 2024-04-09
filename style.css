@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+:root {
+  --blue: #4d7feb;
+  --orange: #eab308;
+  --gray: #a1a1aa;
+}
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar mainbar mainbar mainbar"
+    "sidebar mainbar mainbar mainbar"
+    "sidebar mainbar mainbar mainbar";
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--blue);
+  color: white;
+  padding: 10px 40px;
+  font-weight: bold;
+}
+.random {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainbar {
+  grid-area: mainbar;
+}
+.header {
+  grid-area: header;
+}
+.top > div,
+.bottom > div {
+  margin: 10px 0px;
+  letter-spacing: 1px;
+}
+.home,
+.profile,
+.message,
+.history,
+.tasks,
+.communities,
+.setting,
+.support,
+.privacy {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.profile > svg,
+.message > svg,
+.history > svg,
+.tasks > svg,
+.communities > svg,
+.setting>svg,.support>svg,.privacy>svg{
+  width: 23px;
+  margin-right: 20px;
+  filter: invert(1) sepia(100%);
+  margin-top: -3px;
+}
+.home > svg {
+  width: 26px;
+  margin-right: 20px;
+  margin-left: -2px;
+  filter: invert(1) sepia(100%);
+  margin-top: -3px;
+}
+.title{
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+  font-size: 14px;
+}
+.title > svg{
+    width: 40px;
+    margin-left: -2vw;
+    margin-right: 7px;
+    filter: invert(1) sepia(100%);
+
+}
