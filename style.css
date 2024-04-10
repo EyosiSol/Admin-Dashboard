@@ -9,7 +9,7 @@
 :root {
   --blue: #4d7feb;
   --orange: #eab308;
-  --gray: #a1a1aa;
+  --gray: #dadadd;
 }
 .dashboard {
   width: 100vw;
@@ -99,4 +99,109 @@
     filter: invert(1) sepia(100%);
 
 }
+.header{
+    padding-top: 2vh;
+    display: grid;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    grid-template-rows: 40% 60%;
+    height: 25vh;
+    padding: 3vh 0px;
+    
+}
+.searchdiv{
+    margin: 5px 50px;
+    display: grid;
+    grid-template-columns: 60% 40%;
 
+
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 50%;
+}
+.searchbar>svg , .account>svg{
+    width: 34px;
+    margin-right: 10px;
+
+
+}
+#Search{
+    width: 90%;
+    height: 33px;
+    background-color: var(--gray);
+    border-radius: 20px;
+    border: none;
+    padding-left: 15px;
+    font-size: 20px;
+}
+#Search:focus{
+    outline: none;
+}
+.account{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 50%;
+    padding-left: 11vw;
+    font-weight: bold;
+
+}
+.account > *{
+    padding-left: 10px;
+}
+#acc{
+    width: 70px;
+}
+.update{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 5px 50px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    
+}
+.user{
+    display: flex;
+    margin-left: 0.3vw;
+    align-content: center;
+
+}
+.greetings{
+    padding-top: 1.3vh;
+    padding-left: 0.5vw;
+}
+.greetings > :last-child{
+    margin-top:0.8vh ;
+    font-size: 26px;
+    font-weight: bold;
+}
+.prof > svg{
+    width: 80px;
+}
+.buttons{
+    margin-top: -2vh;
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+    margin-left: 3vw;
+}
+.buttons > button{
+    padding: 10px;
+    width: 90px;
+    border-radius: 19px;
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+button:hover{
+    background-color: #1d4db4;
+    cursor: pointer;
+}
+svg:hover{
+    cursor: pointer;
+}
