@@ -6,16 +6,20 @@
   box-sizing: border-box;
   font-family: Roboto;
 }
+body{
+    background-color: var(--gray);
+}
 :root {
   --blue: #4d7feb;
   --orange: #eab308;
-  --gray: #dadadd;
+  --gray: #ececf0;
 }
 .dashboard {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr auto;
   grid-template-areas:
     "sidebar header header header"
     "sidebar mainbar mainbar mainbar"
@@ -27,9 +31,10 @@
   background-color: var(--blue);
   color: white;
   font-weight: bold;
+  height: 100%;
 }
 .random {
-  height: 70%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,7 +48,7 @@
 }
 .top > div,
 .bottom > div {
-  margin: 10px 0px;
+  margin: 0.5vh 0px;
   letter-spacing: 1px;
 }
 .home,
@@ -64,6 +69,7 @@
 }
 .hov:hover{
     background-color: #2356c5;
+    cursor: pointer;
 }
 
 
@@ -106,6 +112,7 @@
     grid-template-rows: 40% 60%;
     height: 25vh;
     padding: 3vh 0px;
+    background-color: white;
     
 }
 .searchdiv{
@@ -204,4 +211,70 @@ button:hover{
 }
 svg:hover{
     cursor: pointer;
+}
+
+.mainbar{
+    /* border: 1px solid black; */
+    margin:  20px 20px 20px;
+    
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 1vw;
+    gap: 20px;
+    margin-bottom: 8vh;
+   
+
+}
+.content{
+    margin-top: 10px;
+    padding: 1px;
+    /* border: 1px solid black; */
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3 auto;
+    gap: 20px;
+    
+}
+.articles{
+
+    background-color: white;
+    height: auto;
+    border-radius: 8px;
+    border-left: 8px solid var(--orange);
+    padding: 25px;
+
+    display: grid;
+    grid-template-areas: 
+    "heading heading heading heading"
+    "paragraph paragraph paragraph paragraph"
+    "paragraph paragraph paragraph paragraph"
+    ".  .  . fav";
+}
+.fav{
+    border: 1px solid black;
+    display: flex;
+    align-content: flex-end;
+    grid-area: fav;
+}
+.fav > svg{
+    width: 30px;
+    margin: 0 10px;
+    padding: 6px;
+}
+.articles > p{
+    color: rgb(105, 102, 102);
+    grid-area: paragraph;
+    font-size: 13px;
+}
+.articles > h3{
+    grid-area: heading;
+    font-size: 17px;
+}
+.articles:hover{
+    background-color: rgb(245, 244, 244);
+    cursor: pointer;
+}
+.articles svg:hover{
+    background: rgb(220, 216, 216);
 }
